@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['greeting'] = 'Hello! Welcome to Moodle plugin development.';
+$string['greeting'] = 'Hello! Welcome to Moodle plugin development!';
 $string['greeting:addinstance'] = 'Add a new greeting block';
 $string['greeting:myaddinstance'] = 'Add a new greeting block to the Dashboard';
 $string['jsloaded'] = 'This block was loaded via JavaScript.';
