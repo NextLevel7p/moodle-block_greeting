@@ -1,4 +1,3 @@
-<?php
 // This file is part of Moodle - https://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -15,18 +14,17 @@
 // along with Moodle.  If not, see <https://www.gnu.org/licenses/>.
 
 /**
- * Brazilian Portuguese strings for block_greeting.
+ * Shows a notification when the greeting block loads.
  *
- * @package    block_greeting
+ * @module     block_greeting/greeting
  * @copyright  2026 Samuel Peixoto
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+import Notification from 'core/notification';
+import {getString} from 'core/str';
 
-$string['greeting'] = 'Olá! Bem-vindo ao desenvolvimento de plugins Moodle.';
-$string['greeting:addinstance'] = 'Adicionar um novo bloco de saudação';
-$string['greeting:myaddinstance'] = 'Adicionar um novo bloco de saudação ao Painel';
-$string['jsloaded'] = 'Este bloco foi carregado via JavaScript.';
-$string['pluginname'] = 'Saudação';
-$string['privacy:metadata'] = 'O bloco Saudação não armazena nenhum dado pessoal.';
+export const init = async() => {
+    const message = await getString('jsloaded', 'block_greeting');
+    Notification.addNotification({message, type: 'info'});
+};
