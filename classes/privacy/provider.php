@@ -26,8 +26,13 @@ namespace block_greeting\privacy;
 
 use Override;
 
-defined('MOODLE_INTERNAL') || die();
-
+/**
+ * Privacy provider for block_greeting.
+ *
+ * @package    block_greeting
+ * @copyright  2026 Samuel Peixoto
+ * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 class provider implements \core_privacy\local\metadata\null_provider {
     /**
      * Privacy provider for block_greeting
