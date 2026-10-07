@@ -24,7 +24,21 @@
 
 namespace block_greeting\local;
 
-final class greeting_text {
+/**
+ * Class greeting_text
+ *
+ * Handles greeting text functionality.
+ *
+ * @package block_greeting
+ * @copyright [year] [your name/organization]
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class greeting_text {
+        /**
+         * Get the greeting message.
+         *
+         * @return string The greeting message
+         */
     public static function get_message(): string {
         return get_string('greeting', 'block_greeting');
     }
